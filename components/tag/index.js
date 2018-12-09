@@ -1,0 +1,32 @@
+// components/tag/index.js
+Component({
+  options: {
+    multipleSlots: true, // 允许使用多插槽
+  },
+
+  externalClasses: ['tag-class'], // 外部样式 类名
+  /**
+   * 组件的属性列表
+   */
+  properties: {
+    text: String
+  },
+
+  /**
+   * 组件的初始数据
+   */
+  data: {
+
+  },
+
+  /**
+   * 组件的方法列表
+   */
+  methods: {
+    onTap(event) {
+      this.triggerEvent('tapping', {
+        text: this.properties.text
+      })
+    }
+  }
+})

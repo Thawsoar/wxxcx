@@ -1,0 +1,23 @@
+<!--components/video/video.wxml-->
+<wxs src="../../utils/format.wxs" module="util" />
+<view class="container" bind:tap="onTap">
+  <view class="video-container">
+    <image class='cover' src='{{data.cover.detail}}' />
+  </view>
+  <view class='detail'>
+    <view class="detail-left">
+      <view class='text-container'>
+        <text class='title'>{{data.title}}</text>
+        <view class='info'>
+          <text>{{data.author.name}}</text>
+          <text>·</text>
+          <text>{{util.dateFormat(data.date, 'yyyy-MM-dd')}}</text>
+        </view>
+        <view class='info'>
+          <text>#{{data.category}}</text>
+          <text>/{{util.formatSeconds(data.duration)}}</text>
+        </view>
+      </view>
+    </view>   
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "v-video": "/components/video/index",
+    "v-episode": "/components/episode/index"
+  }
+}

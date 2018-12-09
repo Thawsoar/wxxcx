@@ -1,0 +1,14 @@
+
+<view class="videos-container">
+    <view class='header'>
+      <v-episode class="epsoide" >
+        <text class='title' slot="before">每日精选视频</text>
+      </v-episode>
+    </view>
+    <view class='video-list'>
+      <block wx:key="id" wx:for="{{list}}">
+        <v-video data="{{item}}" />
+      </block>
+    </view>
+  
+</view>

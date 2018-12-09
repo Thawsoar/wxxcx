@@ -1,0 +1,51 @@
+/* components/video/video.wxss */
+.container {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #ccc;
+  padding: 20rpx;
+}
+.video-container {
+  position: relative;
+}
+
+.cover {
+  width: 300rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+  margin-right: 15rpx;
+}
+.video-container text {
+  position: absolute;
+  bottom: 40rpx;
+  right: 40rpx;
+  color: #fff;
+  background: rgba(0, 0, 0, .2);
+  padding: 4rpx;
+  border-radius: 2px;
+}
+.detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20rpx;
+
+}
+.detail-left {
+  display: flex;
+  flex-direction: row;
+}
+ 
+.text-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 32rpx;
+}
+.info {
+  color: #ccc;
+  font-size: 24rpx;
+  margin-top: 15rpx;
+}
+.info text {
+  margin-right: 10rpx;
+}

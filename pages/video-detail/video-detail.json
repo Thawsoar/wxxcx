@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "v-tag": "/components/tag/index",
+    "v-video-detail": "/components/video_detail/index"
+  }
+}

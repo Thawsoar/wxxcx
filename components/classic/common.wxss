@@ -1,0 +1,21 @@
+/* components/classic/moive/index.wxss */
+.classic-movie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.classic-img {
+  width: 750rpx;
+  height: 500rpx;
+}
+.tag {
+  width: 46rpx;
+  height: 142rpx;
+  position: relative;
+  right: -30rpx;
+  bottom: 58rpx;
+}
+.content {
+  font-size: 36rpx;
+  max-width: 550rpx;
+}
