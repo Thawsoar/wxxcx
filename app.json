@@ -5,7 +5,10 @@
     "pages/my/my",
     "pages/book-detail/book-detail",
     "pages/video/video",
-    "pages/video-detail/video-detail"
+    "pages/video-detail/video-detail",
+    "pages/about/about",
+    "pages/course/course",
+    "pages/classic-detail/classic-detail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",
@@ -29,8 +32,8 @@
       },
       {
         "pagePath": "pages/video/video",
-        "selectedIconPath": "/images/tab/my@highlight.png",
-        "iconPath": "/images/tab/my.png",
+        "selectedIconPath": "/images/tab/vedio@highlight.png",
+        "iconPath": "/images/tab/vedio.png",
         "text": "视频"
       },
       {

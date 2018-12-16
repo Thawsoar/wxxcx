@@ -27,8 +27,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 20rpx;
-
+  align-items: center;
 }
 .detail-left {
   display: flex;
@@ -45,10 +44,34 @@
   flex-direction: column;
   font-size: 28rpx;
 }
+.title {
+  max-width: 440rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
 .info {
   color: #ccc;
   font-size: 24rpx;
 }
 .info text {
   margin-right: 10rpx;
+}
+
+.share-btn {
+  margin-top: 30rpx;
+  margin-left: 10rpx;
+}
+.share-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+  
+
+.share {
+  width: 60rpx;
+  height: 60rpx;
+   
 }

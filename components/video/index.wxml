@@ -1,7 +1,7 @@
 <!--components/video/video.wxml-->
 <wxs src="../../utils/format.wxs" module="util" />
-<view class="container" bind:tap="onTap">
-  <view class="video-container">
+<view class="container" >
+  <view class="video-container" bind:tap="onTap">
     <image class='cover' src='{{data.cover.detail}}' />
     <text>{{util.formatSeconds(data.duration)}}</text>
   </view>
@@ -17,7 +17,12 @@
         </view>
       </view>
     </view>
-   
-    <v-tag text="{{data.category}}" />
+    <view class='share-container'>
+      <v-tag text="{{data.category}}" />
+      <v-button class="share-btn" open-type="share">
+        <image class="share" slot="img" src="/images/icon/share.png" />
+      </v-button>
+    </view>
+  
   </view>
 </view>

@@ -48,6 +48,7 @@ Page({
       details: currentDtails,
       otherList: currentOtherList
     })
+    this.bindPlay()
   },
   _filterVideoData(data) {
     let filterData = data.itemList.filter(_ => _.type == 'video')

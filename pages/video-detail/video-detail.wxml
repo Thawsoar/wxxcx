@@ -1,45 +1,60 @@
 <!--pages/video-detail/video-detail.wxml-->
 <wxs src="../../utils/format.wxs" module="util" />
-<view class="page-body">
-  <view class="page-section" bind:tap="bindPlay">
-    <video id="myVideo" src="{{details.playUrl}}" binderror="videoErrorCallback" controls></video>
-    <image hidden="{{playing}}" class='cover' src="{{details.cover.detail}}" />
+
+<view class="page-section" bind:tap="bindPlay">
+  <video id="myVideo" src="{{details.playUrl}}" binderror="videoErrorCallback" controls></video>
+
+ 
+    
+  <cover-view hidden="{{playing}}" style="position: fixed;width:100%; height:400rpx;;top:0;left:0;">
+    <image  class='cover' src="{{details.cover.detail}}" />
     <image 
       class="player-img" 
       bind:tap="onPlay" 
       hidden="{{playing}}"
       src="{{playSrc}}" />
-  </view>
+  </cover-view>
+
 </view>
-<view class='title-box'>
-  <view class='title-wrap'>
-    <view class="detail-left">
-      <image class='author-img' src='{{details.author.icon}}'/>
-      <view class='text-container'>
-        <text class='title'>{{details.title}}</text>
-        <view class='info'>
-          <text>{{details.author.name}}</text>
-          <text>·</text>
-          <text>{{util.dateFormat(details.date, 'yyyy-MM-dd')}}</text>
+
+<scroll-view class="main" scroll-y="true">
+  <view class='title-box'>
+    <view class='title-wrap'>
+      <view class="detail-left">
+        <image class='author-img' src='{{details.author.icon}}'/>
+        <view class='text-container'>
+          <text class='title'>{{details.title}}</text>
+          <view class='info'>
+            <text>{{details.author.name}}</text>
+            <text>·</text>
+            <text>{{util.dateFormat(details.date, 'yyyy-MM-dd')}}</text>
+          </view>
         </view>
       </view>
+      <view class='share-container'>
+        <v-tag text="{{details.category}}" />
+        <v-button class="share-btn" open-type="share">
+          <image class="share" slot="img" src="/images/icon/share.png" />
+        </v-button>
+      </view>
     </view>
-    <v-tag text="{{details.category}}" />
   </view>
-</view>
 
-<view class='description'>
-  <text>{{details.description}}</text>
-  <view class='tags'>
-    <block wx:for="{{details.tags}}" wx:key="id">
-      <v-tag text="{{item.name}}"/>
+  <view class='description'>
+    <text>{{details.description}}</text>
+    <view class='tags'>
+      <block wx:for="{{details.tags}}" wx:key="id">
+        <view class='v-tag'>
+          <v-tag text="{{item.name}}"/>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class='other-list'>
+    <block wx:for="{{otherList}}" wx:key="id">
+      <v-video-detail bind:switch="onSwitch" data="{{item}}"></v-video-detail>
     </block>
   </view>
-</view>
-
-<view class='other-list'>
-  <block wx:for="{{otherList}}" wx:key="id">
-    <v-video-detail bind:switch="onSwitch" data="{{item}}"></v-video-detail>
-  </block>
-</view>
+</scroll-view>
 

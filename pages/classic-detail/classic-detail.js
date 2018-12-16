@@ -20,14 +20,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const cid = this.properties.cid
-    const type = this.properties.type
-    classicModel.getLatest((res) => {
-      console.log(res)
+    const cid = options.cid
+    const type = options.type
+   
+    classicModel.getById(cid, type, res => {
+      this._getLikeFavor(type,cid,)
       this.setData({
         classic: res,
-        likeStatus: res.like_status,
-        likeNums: res.fav_nums
+        latest: classicModel.isLatest(res.index),
+        first: classicModel.isFirst(res.index)
       })
     })
     

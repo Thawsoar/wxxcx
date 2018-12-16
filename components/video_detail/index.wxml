@@ -2,7 +2,7 @@
 <wxs src="../../utils/format.wxs" module="util" />
 <view class="container" bind:tap="onTap">
   <view class="video-container">
-    <image class='cover' src='{{data.cover.detail}}' />
+    <image class='cover-image' src='{{data.cover.detail}}' />
   </view>
   <view class='detail'>
     <view class="detail-left">

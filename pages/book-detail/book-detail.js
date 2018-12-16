@@ -67,6 +67,10 @@ Page({
       posting: true
     })
   },
+  onLike(event) {
+    const like_or_cancel = event.detail.behavior
+    likeModel.like(like_or_cancel, this.data.book.id, 400)
+  },
 
   onCancel(event) {
     this.setData({
