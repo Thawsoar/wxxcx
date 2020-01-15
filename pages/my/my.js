@@ -21,9 +21,40 @@ Page({
     authorized: false,
     userInfo: null,
     bookCount: 0,
-    classics: null
+    classics: null,
+    checked: true,
+    isOpen: true,
+    selected: [
+      {
+        date: '2019-8-21'
+      }, {
+        date: '2019-8-22'
+      }, {
+        date: '2019-8-24'
+      }, {
+        date: '2019-8-25'
+      }
+    ]
   },
+  /**
+ * 日历是否被打开
+ */
+  bindselect(e) {
+    console.log(e.detail.ischeck)
+  },
+  /**
+   * 获取选择日期
+   */
+  bindgetdate(e) {
+    let time = e.detail;
+    console.log(time)
 
+  },
+  onChange(event) {
+    this.setData({
+      checked: event.detail
+    });
+  },
   onShow(options) {
     this.userAuthorized1()
     this.getMyBookCount()

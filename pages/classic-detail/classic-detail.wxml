@@ -6,6 +6,7 @@
 </wxs>
 <view class='container'>
   <view class="header">
+
     <v-episode class="epsoide" index="{{m1.formatIndex(classic.index)}}">
       <text class='plain' slot="before">NO.</text>
     </v-episode>
